@@ -157,6 +157,33 @@ transition:0.3s;
 transform:scale(1.1);
 }
 
+/* 📱 АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА */
+@media (max-width: 600px) {
+
+.btns {
+flex-direction: column;
+align-items: center;
+}
+
+.btns a {
+width: 100%;
+display: flex;
+justify-content: center;
+}
+
+.btns button {
+width: 100%;
+max-width: 320px;
+font-size: 16px;
+padding: 14px;
+}
+
+button:active {
+transform: scale(0.97);
+}
+
+}
+
 </style>
 </head>
 
