@@ -88,15 +88,20 @@ gap:15px;
 flex-wrap:wrap;
 }
 
-button{
-padding:12px 22px;
-border-radius:12px;
-border:none;
-background:linear-gradient(135deg,#2563eb,#1d4ed8);
-color:white;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
+.btn {
+padding: 14px 24px;
+border-radius: 12px;
+background: linear-gradient(135deg,#2563eb,#1d4ed8);
+color: white;
+font-weight: 600;
+text-align: center;
+display: inline-block;
+transition: 0.3s;
+}
+
+.btn:hover {
+transform: translateY(-3px) scale(1.05);
+box-shadow: 0 10px 25px rgba(37,99,235,0.5);
 }
 
 /* ЭФФЕКТ КНОПОК */
@@ -158,6 +163,24 @@ transform:scale(1.1);
 }
 
 /* 📱 АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА */
+
+@media (max-width: 600px) {
+
+.btns {
+flex-direction: column;
+align-items: stretch;
+}
+
+.btn {
+width: 100%;
+font-size: 16px;
+padding: 16px;
+}
+
+}
+
+/* ------- */
+
 @media (max-width: 600px) {
 
 .btns {
@@ -231,13 +254,9 @@ transform: scale(0.97);
 </p>
 
 <div class="formats">
-<a href="https://disk.yandex.ru/d/qt0K-NZmdTykdg" target="_blank">
-<button>Reels / Shorts</button>
-</a>
+<a href="https://disk.yandex.ru/d/qt0K-NZmdTykdg" class="btn" target="_blank"> Reels / Shorts </a>
 
-<a href="https://disk.yandex.ru/d/VPfBeCESAj-l4w" target="_blank">
-<button>YouTube видео</button>
-</a>
+<a href="https://disk.yandex.ru/d/VPfBeCESAj-l4w" class="btn" target="_blank"> YouTube видео </a>
 </div>
 
 </div>
@@ -257,15 +276,9 @@ transform: scale(0.97);
 </p>
 
 <div class="btns">
-<a href="https://t.me/igor04728" target="_blank">
-<button>Написать в Telegram</button>
-</a>
-<a href="https://mail.yandex.ru/compose?to=igor-video-edit@yandex.ru" target="_blank">
-<button>Написать на почту</button>
-</a>
-<a href="https://kwork.ru/editing-media/48626020/videomontazh-shorts-tik-tok?ref=15603020" target="_blank">
-<button>Безопасная сделка (Kwork)</button>
-</a>
+<a href="https://t.me/igor04728" class="btn" target="_blank"> Написать в Telegram </a>
+<a href="https://mail.yandex.ru/compose?to=igor-video-edit@yandex.ru" class="btn" target="_blank"> Написать на почту </a>
+<a href="https://kwork.ru/editing-media/48626020/videomontazh-shorts-tik-tok?ref=15603020" class="btn" target="_blank"> Безопасная сделка (Kwork) </a>
 </div>
 
 </div>
@@ -289,9 +302,7 @@ SPHiNX — это мой авторский проект, в котором я �
 </p>
 
 <div class="btns">
-<a href="https://youtube.com/@sphinx-video?si=g2-ZDVS4_hhy6HDA" target="_blank">
-<button>Подписаться</button>
-</a>
+<a href="https://youtube.com/@sphinx-video?si=g2-ZDVS4_hhy6HDA" class="btn" target="_blank"> Подписаться </a>
 </div>
 
 </div>
