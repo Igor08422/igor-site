@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Команда | Игорь</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#020617;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ФОН */
+
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.25) 1px, transparent 1px),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,.2) 1px, transparent 1px),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,.25) 1px, transparent 1px);
+    background-size:250px 250px;
+}
+
+/* ШАПКА */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:18px 0;
+
+    background:rgba(2,6,23,.85);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(96,165,250,.15);
+
+    z-index:1000;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#60a5fa;
+}
+
+/* HERO */
+
+.hero{
+    max-width:900px;
+    margin:auto;
+
+    padding-top:160px;
+    padding-bottom:80px;
+
+    text-align:center;
+}
+
+.hero h1{
+    font-size:56px;
+    color:#60a5fa;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#cbd5e1;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* КОНТЕЙНЕР */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px 80px;
+}
+
+/* ВАКАНСИИ */
+
+.jobs{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.job-card{
+
+    background:#0f172a;
+
+    border:1px solid rgba(59,130,246,.15);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    transition:.35s;
+}
+
+.job-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#60a5fa;
+
+    box-shadow:
+    0 0 20px rgba(59,130,246,.15);
+}
+
+.job-card h2{
+    color:#60a5fa;
+    margin-bottom:15px;
+}
+
+.job-card h3{
+    margin-top:20px;
+    margin-bottom:10px;
+    font-size:16px;
+}
+
+.job-card p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.job-card{
+    display:flex;
+    flex-direction:column;
+}
+
+.job-card ul{
+    margin-left:20px;
+    color:#94a3b8;
+    line-height:1.8;
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 22px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn{
+    margin-top:auto;
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 20px rgba(37,99,235,.4);
+}
+
+/* БЛОК ВНИЗУ */
+
+.bottom-box{
+
+    margin-top:70px;
+
+    background:#0f172a;
+
+    border:1px solid rgba(59,130,246,.15);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+}
+
+.bottom-box h2{
+    color:#60a5fa;
+    margin-bottom:15px;
+}
+
+.bottom-box p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.btn{
+
+    margin-top:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:15px 20px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+    );
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    transform:
+    translateY(-3px)
+    scale(1.02);
+
+    box-shadow:
+    0 0 20px rgba(59,130,246,.4),
+    0 0 40px rgba(59,130,246,.2);
+}
+
+/* АДАПТИВ */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero{
+    padding-top:130px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<header class="navbar">
+    <a href="index.html">← Вернуться на главный сайт</a>
+</header>
+
+<section class="hero">
+
+<h1>Набираю людей в свою команду</h1>
+
+<p>
+Я постепенно расширяю свою деятельность и ищу людей для совместной работы над клиентскими проектами.
+Если тебе интересны монтаж, дизайн, YouTube и создание качественного контента — возможно, мы сработаемся.
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="jobs">
+
+<!-- Монтажёр -->
+
+<div class="job-card">
+
+<h2>🎬 Помощник монтажёра</h2>
+
+<p>
+Помощь в подготовке проектов, работе с исходниками и выполнении несложных монтажных задач.
+Отличный вариант для получения опыта и развития навыков.
+</p>
+
+<h3>Требования:</h3>
+
+
+
+<ul>
+<li>Базовое знание Premiere Pro</li>
+<li>Ответственность</li>
+<li>Соблюдение сроков</li>
+<br>
+</ul>
+
+
+<a href="https://t.me/igor04728" target="_blank" class="btn">
+Откликнуться
+</a>
+
+</div>
+
+<!-- Продюсер -->
+
+<div class="job-card">
+
+<h2>📈 Продюсер контента</h2>
+<br>
+<p>
+Помощь в поиске идей, анализе контента, разработке форматов и развитии проектов.
+</p>
+<br>
+<br>
+<h3>Требования:</h3>
+
+<ul>
+<li>Насмотренность</li>
+<li>Понимание YouTube</li>
+<li>Креативное мышление</li>
+<li>Инициативность</li>
+</ul>
+
+<a href="https://t.me/igor04728" target="_blank" class="btn">
+Откликнуться
+</a>
+
+</div>
+
+<!-- Превью -->
+
+<div class="job-card">
+
+<h2>🎨 Создатель превью</h2>
+<br>
+<p>
+Создание привлекательных и кликабельных обложек для YouTube и других платформ.
+</p>
+<br>
+<br>
+<h3>Требования:</h3>
+
+<ul>
+<li>Знание Photoshop или аналогов</li>
+<li>Чувство композиции</li>
+<li>Понимание визуала YouTube</li>
+<li>Портфолио приветствуется</li>
+</ul>
+
+<a href="https://t.me/igor04728" target="_blank" class="btn">
+Откликнуться
+</a>
+
+</div>
+
+</div>
+
+<div class="bottom-box">
+
+<h2>🚀 Не нашёл подходящую вакансию?</h2>
+
+<p>
+Если ты считаешь, что можешь быть полезен в работе над проектами —
+напиши мне в Telegram и расскажи немного о себе.
+Я всегда открыт к новым знакомствам и интересным людям.
+</p>
+<br>
+
+<a href="https://t.me/igor04728" target="_blank" class="btn">
+Связаться в Telegram
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
